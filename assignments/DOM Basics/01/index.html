@@ -9,8 +9,32 @@
   <body>
     <body>
       <h1>Document Object Model</h1>
+      <div class="up"></div>
     <script>
       // your code goes here
+      // textnode
+      var para= document.createElement('p');
+      para.textContent='Hello Javascript!';
+      para.innerHTML=`I love <strong>Javascript</strong>`   
+      var element =document.querySelector(".up")
+      element.appendChild(para);
+      var ul=document.createElement("ul");
+      document.body.append(ul);
+      var li=document.createElement("li");
+      li.innerText="Buy Groceries";
+      ul.append(li);
+      var li2=document.createElement("li");
+      li2.innerText="Feed the cat";
+      ul.append(li2);
+      var li3=document.createElement("li");
+      li3.innerText="Do laundry";
+      ul.append(li3);
+      var ul2=document.createElement("ul");
+      document.body.append(ul2);
+      var li4=document.createElement("li");
+      ul2.append(li4);
+      ul2.removeChild(li4);
+      
     </script>
   </body>
 </html>

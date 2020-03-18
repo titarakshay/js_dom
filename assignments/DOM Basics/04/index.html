@@ -12,5 +12,17 @@
       <li>Favorites: <span id="favorites"></span></li>
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
+    <script>
+      document.body.style.fontFamily="Arial, sans-serif";
+      var ul=document.querySelector("ul").children;
+      ul[0].innerText="Akshay";
+      ul[1].innerText="Traveling";
+      ul[2].innerText="Pune";
+      document.querySelectorAll("li").forEach(val=>val.classList.add("listitem"));
+      document.querySelectorAll("li").forEach(val=>val.style.color="red");
+      var image=document.createElement("img");
+      image.src="./min.jpg";
+      document.body.append(image);
+    </script>
   </body>
 </html>

@@ -4,6 +4,7 @@ var quotes;
 
 
 
+
 quotes = [
     {
         "quoteAuthor": "Thomas Edison",
@@ -314,3 +315,20 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+var div=document.createElement("div");
+document.body.append(div);
+
+function random(){
+    return quotes[(Math.floor(Math.random()*quotes.length))]['quoteText'] + " : "+quotes[(Math.floor(Math.random()*quotes.length))]['quoteAuthor'];
+
+ }
+ var str=random();
+
+document.body.addEventListener("keyup",function(e){
+    if(e.keyCode ==  32){
+        var str=random();
+    div.textContent=str;
+    }
+});
+
+div.textContent=str;
